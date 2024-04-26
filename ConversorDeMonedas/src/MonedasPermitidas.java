@@ -1,11 +1,12 @@
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
 
 public class MonedasPermitidas {
-    private static Conversion conversion = new Conversion();
-    private Map<Integer, String> monedas = new HashMap<>();
-    private Scanner lectura = new Scanner(System.in);
+    private static final Conversion conversion = new Conversion();
+    private final Map<Integer, String> monedas = new HashMap<>();
+    private final Scanner lectura = new Scanner(System.in);
     private String monedaFinal = "";
-    private List<String> historialConversiones = new ArrayList<>();
 
     public MonedasPermitidas() {
         Monedas();
@@ -43,7 +44,6 @@ public class MonedasPermitidas {
 
         String resultado = conversion.resultadoConversion(deMoneda, aMoneda, valor);
         System.out.println(resultado + " " + monedaFinal);
-        historialConversiones.add(resultado);
     }
 
     public void mostrarMonedas() {

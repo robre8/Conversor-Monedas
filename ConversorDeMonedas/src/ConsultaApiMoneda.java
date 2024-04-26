@@ -1,10 +1,10 @@
+import com.google.gson.Gson;
+
 import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.util.Map;
-
-import com.google.gson.Gson;
 
 public class ConsultaApiMoneda {
 
